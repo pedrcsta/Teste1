@@ -1,4 +1,9 @@
 <html>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+
     <?xml version="1.0" encoding="UTF-8" ?>
 
 	<title> A minha Agenda </title>
@@ -185,6 +190,23 @@ function alarm() {
             </tr>
 	 </table>
 	 </form>
+
+
+<div class="container">
+	<section id="content">
+		<form action="plano_terap.php" method="GET">
+			<h1>Meus Alertas</h1>
+			<div>
+				<input type="text" placeholder="codigo" required="" name="idprescricao" />
+			</div>
+			<div>
+				<input type="submit" value="Carregar" />
+				<a href="plano_terap.php">Ver Conteudo Alertas</a>
+			</div>
+		</form><!-- form -->
+
+	</section><!-- content -->
+</div><!-- container -->
 
 </body>
 	 
