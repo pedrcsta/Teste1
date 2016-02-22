@@ -26,19 +26,12 @@
     <gap:plugin name="org.apache.cordova.vibration" /> 
 
  
-	<access origin="*"/>
+	<access origin="http://192.168.1.100"/>
  
 	<icon src="sunny.png" density="ldpi" />
 	<icon src="sunny.png" density="mdpi" />
 	<icon src="sunny.png" density="hdpi" />
     <icon src="sunny.png" density="xhdpi" />
-    <splash src="sunny.png" density="land-hdpi"/>
-    <splash src="sunny.png" density="land-ldpi"/>
-    <splash src="sunny.png" density="land-mdpi"/>
-    <splash src="sunny.png" density="land-xhdpi"/>
-    <splash src="sunny.png" density="port-hdpi"/>
-    <splash src="sunny.png" density="port-ldpi"/>
-    <splash src="sunny.png" density="port-mdpi"/>
-    <splash src="sunny.png" density="port-xhdpi"/>
+
 		
 </widget>
