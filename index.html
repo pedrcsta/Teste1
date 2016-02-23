@@ -5,7 +5,7 @@
 <input type="text" id="idplano" name="Id. Plano">
 <button onclick="Mostra_plano()">Carregar</button> 
 
-<p>Plano: <span id="ConteudoPlano"></span></p> 
+<p>Plano: <span id="ConteudoPlano"></span></p>  
 
 <script>
 function Mostra_plano() {
@@ -18,8 +18,10 @@ function Mostra_plano() {
   }
   xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("ConteudoPlano").innerHTML = xhttp.responseText;
+    if (xhttp.readyState == 4 ) {
+		if (xhttp.status == 200 || xhttp.status== 0) {
+			document.getElementById("ConteudoPlano").innerHTML = xhttp.responseText;
+		}
     }
   };
   xhttp.open("GET", "http://192.168.1.100/Agenda/plano_terap.php?idplano="+str, true);
