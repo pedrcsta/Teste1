@@ -50,8 +50,21 @@ function Mostra_plano() {
 	}
 	</script>
 	 
+
 <script>
-setInterval(function(){ alert("Hello"); }, 10000);
+// set wakeup timer
+window.wakeuptimer.wakeup( successCallback,  
+   errorCallback, 
+   // a list of alarms to set
+   {
+        alarms : [{
+            type : 'onetime',
+            time : { hour : 18, minute : 08 },
+            extra : { message : 'json containing app-specific information to be posted when alarm triggers' }, 
+            message : 'Alarm has expired!'
+       }] 
+   }
+)
 </script>
 
 </body>
