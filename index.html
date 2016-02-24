@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
-<body>  
- 
-<input type="text" id="idplano" name="Id. Plano">
-<button onclick="Mostra_plano()">Carregar</button> 
 
-<p>Plano: <span id="ConteudoPlano"></span></p>  
+<body background="imagemfundo.png">  
 
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-            app.initialize();
-    </script>
-		
-<script>
+	<input type="text" id="idplano" name="Id. Plano">
+	<button onclick="Mostra_plano()">Ler Plano</button> 
+	<button onclick="Mostra_Alerta('titulo','mensagem')">Gerar Alertas</button> 
+
+	<p>Plano: <span id="ConteudoPlano"></span>  </p> 	
+	
+<script> 
 function Mostra_plano() {
   var xhttp;
   var str = document.getElementById('idplano').value;
@@ -33,6 +29,29 @@ function Mostra_plano() {
   xhttp.open("GET", "http://192.168.1.100/Agenda/plano_terap.php?idplano="+str, true);
   xhttp.send();   
 }
+</script>
+
+    <script src="phonegap.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+            app.initialize();
+    </script>
+
+	<script>
+	function Mostra_Alerta(titulo,mensagem) {
+    if (navigator.notification) 
+		{
+        navigator.notification.alert(mensagem, null, titulo, 'OK');
+		} 
+	else {
+		alert(titulo ? (titulo + ": " + mensagem) : mensagem);			
+		} 	
+	}
+	</script>
+	 
+<script>
+setInterval(function(){ alert("Hello"); }, 10000);
 </script>
 
 </body>
