@@ -9,26 +9,27 @@
 
 	<p>Plano: <span id="ConteudoPlano"></span>  </p> 	
 	
-<script> 
-function Mostra_plano() {
-  var xhttp;
-  var str = document.getElementById('idplano').value;
+	<script> 
+	function Mostra_plano() {
+	var xhttp;
+	var str = document.getElementById('idplano').value;
   
-  if (str.length == 0) { 
-    document.getElementById("ConteudoPlano").innerHTML = "";
-    return;
-  }
-  xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 ) {
-		if (xhttp.status == 200 || xhttp.status== 0) {
-			document.getElementById("ConteudoPlano").innerHTML = xhttp.responseText;
+		if (str.length == 0) { 
+			document.getElementById("ConteudoPlano").innerHTML = "";
+		return;
 		}
-    }
-  };
-  xhttp.open("GET", "http://192.168.1.100/Agenda/plano_terap.php?idplano="+str, true);
-  xhttp.send();   
-}
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (xhttp.readyState == 4 ) {
+				if (xhttp.status == 200 || xhttp.status== 0) {
+					document.getElementById("ConteudoPlano").innerHTML = xhttp.responseText;
+					localStorage.setItem("PlanoGravado", xhttp.responseText);
+				}
+			}
+		};
+		xhttp.open("GET", "http://192.168.1.100/Agenda/plano_terap.php?idplano="+str, true);
+		xhttp.send();    
+	}
 </script>
 
     <script src="phonegap.js"></script>
@@ -50,22 +51,10 @@ function Mostra_plano() {
 	}
 	</script>
 	 
+	<script>
+	document.getElementById("ConteudoPlano").innerHTML= localStorage.getItem("PlanoGravado");  
+	</script>
 
-<script>
-// set wakeup timer
-window.wakeuptimer.wakeup( successCallback,  
-   errorCallback, 
-   // a list of alarms to set
-   {
-        alarms : [{
-            type : 'onetime',
-            time : { hour : 18, minute : 14 },
-            extra : { message : 'json containing app-specific information to be posted when alarm triggers' }, 
-            message : 'Alarm has expired!'
-       }] 
-   }
-)
-</script>
-
+ 
 </body>
 </html>
