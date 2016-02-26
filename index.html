@@ -124,11 +124,12 @@
         <!-- schedule -->
         <script type="text/javascript">
             schedule = function () {
+				Mostra_Alerta("Entrou vai chamar schedule", "cordova");
                 cordova.plugins.notification.local.schedule({
                     id: 1,
                     text: 'Test Message 1',
-                    icon: 'http://3.bp.blogspot.com/-Qdsy-GpempY/UU_BN9LTqSI/AAAAAAAAAMA/LkwLW2yNBJ4/s1600/supersu.png',
-                    smallIcon: 'res://cordova',
+                    icon: 'sunny',
+                    smallIcon: 'sunny',
                     sound: null,
                     data: { test: id }
                 });
@@ -138,11 +139,11 @@
                 cordova.plugins.notification.local.schedule([{
                     id: 1,
                     text: 'Multi Message 1',
-                    icon: 'res://cordova'
+                    icon: 'sunny'
                 }, {
                     id: 2,
                     text: 'Multi Message 2',
-                    icon: 'res://icon',
+                    icon: 'sunny',
                     smallIcon: 'ic_media_play'
                 }, {
                     id: 3,
