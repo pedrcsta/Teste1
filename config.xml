@@ -36,6 +36,7 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
+  <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 
 	<icon src="sunny.png" density="ldpi" />
 	<icon src="sunny.png" density="mdpi" />
