@@ -19,6 +19,10 @@
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="android-installLocation" value="auto"/>
   
+	<!-- dependencies -->
+    <dependency id="cordova-plugin-device" />
+    <dependency id="cordova-plugin-app-event" />
+	
   <gap:plugin name="org.apache.cordova.battery-status"/>
   <gap:plugin name="org.apache.cordova.camera"/>
   <gap:plugin name="org.apache.cordova.media-capture"/>
@@ -47,9 +51,7 @@
 	<icon src="sunny.png" density="hdpi" />
     <icon src="sunny.png" density="xhdpi" />
 	
-	<!-- dependencies -->
-    <dependency id="cordova-plugin-device" />
-    <dependency id="cordova-plugin-app-event" />
+
 	
 	
   <access origin="*"/>
