@@ -23,7 +23,7 @@
    <dependency id="cordova-plugin-device" />
    <dependency id="cordova-plugin-app-event" />
 	 
-  <gap:plugin name="org.apache.cordova.local-notification" spec="0.8.1" source="pgb" />
+  <gap:plugin name="org.apache.cordova.local-notification" source="pgb" />
    
 
 	<icon src="sunny.png" density="ldpi" />
