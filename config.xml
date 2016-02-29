@@ -23,7 +23,7 @@
    <dependency id="cordova-plugin-device" />
    <dependency id="cordova-plugin-app-event" />
 	 
-   <gap:plugin name="org.apache.cordova.local-notification" />
+   <gap:plugin name="org.apache.cordova.LocalNotification" />
    
 	<icon src="sunny.png" density="ldpi" />
 	<icon src="sunny.png" density="mdpi" />
