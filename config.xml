@@ -23,17 +23,13 @@
    <dependency id="cordova-plugin-device" />
    <dependency id="cordova-plugin-app-event" />
 	 
-  <gap:plugin name="org.apache.cordova.local-notification" source="pgb" />
+   <gap:plugin name="org.apache.cordova.local-notification" />
    
-
 	<icon src="sunny.png" density="ldpi" />
 	<icon src="sunny.png" density="mdpi" />
 	<icon src="sunny.png" density="hdpi" />
     <icon src="sunny.png" density="xhdpi" />
-	
-
-	
-	
+		
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
