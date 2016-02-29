@@ -21,13 +21,7 @@
 
   <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
   
-  
-  <!-- dependencies -->
-    <dependency id="cordova-plugin-device" />
-    <dependency id="cordova-plugin-app-event" />
-	
-
-	<icon src="sunny.png" density="ldpi" />
+  	<icon src="sunny.png" density="ldpi" />
 	<icon src="sunny.png" density="mdpi" />
 	<icon src="sunny.png" density="hdpi" />
     <icon src="sunny.png" density="xhdpi" />
