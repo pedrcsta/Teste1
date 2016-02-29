@@ -36,12 +36,16 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <gap:plugin name="org.apache.cordova.local-notification" />
+  <gap:plugin name="de.appplant.cordova.plugin.local-notification" />
 
 	<icon src="sunny.png" density="ldpi" />
 	<icon src="sunny.png" density="mdpi" />
 	<icon src="sunny.png" density="hdpi" />
     <icon src="sunny.png" density="xhdpi" />
+	
+	<!-- dependencies -->
+    <dependency id="cordova-plugin-device" />
+    <dependency id="cordova-plugin-app-event" />
 	
 	
   <access origin="*"/>
